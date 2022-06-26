@@ -1,0 +1,35 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.Container {
+    border: 1px solid red;
+    width: 40vw;
+}
+
+.TopCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 0px;
+    border-bottom: 2px solid black;
+}
+
+.TopCard h5 {
+    text-align: center;
+}
+
+.TopCard p {
+    margin: auto 0;
+}
+
+.TopCard h5, p {
+    flex: 1
+}
+
+.Img {
+    height: 100%;
+    width: 100%;
+    image-rendering: crisp-edges;
+}
