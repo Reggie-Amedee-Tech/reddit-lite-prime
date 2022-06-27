@@ -1,15 +1,16 @@
 import React, { useEffect } from 'react'
 import classes from '../cssModules/PostCard.module.css'
-import axios from 'axios';
+
 
 
 
 const PostCard = (props) => {
     const { card } = props;
-
     //if thumbnail === 'self', use a blank white box image
     
-
+    const pictureExist = card.hasOwnProperty('preview')
+    console.log(pictureExist)
+  
 
   return (
     <div>
@@ -19,7 +20,7 @@ const PostCard = (props) => {
             <p>{card.ups}</p>
             </div>
             <div>
-            <img src={card.thumbnail} alt="thumbnail image" className={classes.Img}/>
+            {pictureExist ? <img src={card.preview.images[0].source.url} alt="pic of icon"/> : <p>It doesn't exist</p>}
             </div>
             <div>
               <p>posted by {card.author}</p>
