@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 
-const QuereyedPostForm = () => {
+const QueriedPostForm = () => {
   return (
     <div>QuereyedPostForm</div>
   )
 }
 
-export default QuereyedPostForm
+export default QueriedPostForm

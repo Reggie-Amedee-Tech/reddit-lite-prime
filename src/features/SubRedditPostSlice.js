@@ -1,41 +1,44 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios'
 
-export const fetchQuereyedPost = createAsyncThunk('post/fetchQuereyedPost', async (subreddit) => {
-    const res = await axios.get(`https://www.reddit.com/search.json?q=${subreddit}` )
+export const fetchQueriedPost = createAsyncThunk('post/fetchQuereyedPost', async (subreddit) => {
+    const res = await axios.get(`https://www.reddit.com/search.json?q=${subreddit}&raw_json=1&sort=new&limit=25&include_over_18=off` )
     .then(res => {
-        const json = res.data.data
-        
-        console.log(json)
+        return res.data.data
     })
+    .then(json => {
+        return json.children.map(child => child.data)
+    })
+    console.log(res)
+    return res
 })
 
 const initialState = {
     loading: false,
-    posts: [],
+    queriedPosts: [],
     error: ''
 }
 
-const quereyedPostSlice = createSlice({
+const queriedPostSlice = createSlice({
     name: 'post',
     initialState,
     extraReducers: builder => {
-        builder.addCase(fetchQuereyedPost.pending, state => {
+        builder.addCase(fetchQueriedPost.pending, state => {
             state.loading = true
         })
 
-        builder.addCase(fetchQuereyedPost.fulfilled, (state, action) => {
+        builder.addCase(fetchQueriedPost.fulfilled, (state, action) => {
             state.loading = false
-            state.posts = action.payload
+            state.queriedPosts = action.payload
             state.error = ''
         })
 
-        builder.addCase(fetchQuereyedPost, (state, action) => {
+        builder.addCase(fetchQueriedPost, (state, action) => {
             state.loading = false
-            state.posts = []
+            state.queriedPosts = []
             state.error = action.error.message
         })
     }
 })
 
-export default quereyedPostSlice.reducer
+export default queriedPostSlice.reducer

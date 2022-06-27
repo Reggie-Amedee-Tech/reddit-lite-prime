@@ -1,11 +1,11 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchQuereyedPost } from '../features/SubRedditPostSlice'
+import { fetchQueriedPost } from '../features/SubRedditPostSlice'
 import { Link } from 'react-router-dom'
 import classes from '../cssModules/QuereyedPost.module.css'
 import { useNavigate } from "react-router-dom";
 
-const QuereyedPost = () => {
+const QueriedPost = () => {
     const post = useSelector(state => state.post)
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -15,9 +15,9 @@ const QuereyedPost = () => {
         <h1>Subreddit</h1>
         <div className={classes.Subreddit}>
             {post.posts.map((post, i) => {
-                return <Link to="" key={i} onClick={() => {
-                  dispatch(fetchQuereyedPost(post.subreddit),
-                  navigate(`/:${post.subreddit}`)
+                return <Link to={`:${post.subreddit}`} key={i} onClick={() => {
+                  dispatch(fetchQueriedPost(post.subreddit)
+                  
                   )}}>{post.subreddit}</Link>
             })}
         </div>
@@ -26,4 +26,4 @@ const QuereyedPost = () => {
   )
 }
 
-export default QuereyedPost
+export default QueriedPost

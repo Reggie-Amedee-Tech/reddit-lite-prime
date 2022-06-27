@@ -1,23 +1,21 @@
-import React, { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { fetchQuereyedPost } from '../features/SubRedditPostSlice'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import PostCard from '../components/PostCard'
 import classes from '../cssModules/ViewPost.module.css'
 
 
 
 const ViewQuereyedPost = () => {
-    const post = useSelector(state => state.post)
-    const dispatch = useDispatch()
+    const queriedPost = useSelector(state => state.queriedPosts)
 
     return (
         <div>
         <h2>List of posts </h2>
-        {post.loading && <div>Loading...</div>}
-        {!post.loading && post.error ? <div>Error: {post.error}</div> : null}
-        {!post.loading && post.posts.length ? (
+        {queriedPost.loading && <div>Loading...</div>}
+        {!queriedPost.loading && queriedPost.error ? <div>Error: {queriedPost.error}</div> : null}
+        {!queriedPost.loading && queriedPost.queriedPosts.length ? (
             <ul className={classes.ul}>{
-                post.posts.map((post, i) => {
+                queriedPost.queriedPosts.map((post, i) => {
                     // rendering the subreddit posts to the screen
                    return <li className={classes.li} key={i}><PostCard card={post}/></li>
                 })

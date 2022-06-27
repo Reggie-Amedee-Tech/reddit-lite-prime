@@ -1,5 +1,5 @@
 import ViewPost from "./ViewPost";
-import QuereyedPost from "./QuereyedPost";
+import QueriedPost from "./QueriedPostView";
 import React from 'react'
 import classes from '../cssModules/HomePage.module.css'
 
@@ -10,7 +10,7 @@ const HomePage = () => {
         <ViewPost/>
         </div>
         <div className={classes.Right}>
-        <QuereyedPost />
+        <QueriedPost />
         </div>
         
     </div>

@@ -12,14 +12,13 @@ const ViewPost = () => {
 
     useEffect(() => {
         dispatch(fetchPosts())
-        
     }, [dispatch])
 
     return (
         <div>
         <h2>List of posts </h2>
         {post.loading && <div>Loading...</div>}
-        {!post.loading && post.error ? <div>Error: {post.error}</div> : null}
+        {!post.loading && post.error ? <div>Error: {post.error} </div> : null}
         {!post.loading && post.posts.length ? (
             <ul className={classes.ul}>{
                 post.posts.map((post, i) => {
