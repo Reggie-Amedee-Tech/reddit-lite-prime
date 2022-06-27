@@ -29,7 +29,6 @@
 }
 
 .Img {
-    height: 100%;
-    width: 100%;
-    image-rendering: crisp-edges;
+    height: 400px;
+    width: 300px;
 }

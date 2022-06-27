@@ -1,0 +1,4 @@
+.Subreddit {
+    display: flex;
+    flex-direction: column;
+}

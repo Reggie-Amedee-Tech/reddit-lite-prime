@@ -13,7 +13,7 @@ const ViewPost = () => {
     useEffect(() => {
         dispatch(fetchPosts())
         
-    }, [])
+    }, [dispatch])
 
     return (
         <div>

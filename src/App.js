@@ -1,13 +1,13 @@
 import { Routes, Route } from 'react-router';
 import './App.css';
-import ViewPost from './views/ViewPost';
+import HomePage from './views/HomePage';
 
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path='' element={<ViewPost/>}/>
+        <Route path='' element={<HomePage/>}/>
       </Routes>
       
     </div>
