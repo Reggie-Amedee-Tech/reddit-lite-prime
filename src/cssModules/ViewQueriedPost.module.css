@@ -1,0 +1,25 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.MainDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Left {
+    flex: 3;
+    border: 1px solid black;
+}
+
+.Right {
+    flex: 1;
+    border: 1px solid red
+}
+
+.Subreddit {
+    display: flex;
+    flex-direction: column;
+}

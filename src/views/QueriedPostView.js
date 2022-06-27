@@ -16,9 +16,7 @@ const QueriedPost = () => {
         <div className={classes.Subreddit}>
             {post.posts.map((post, i) => {
                 return <Link to={`:${post.subreddit}`} key={i} onClick={() => {
-                  dispatch(fetchQueriedPost(post.subreddit)
-                  
-                  )}}>{post.subreddit}</Link>
+                  dispatch(fetchQueriedPost(post.subreddit))}}>{post.subreddit}</Link>
             })}
         </div>
     </div>
