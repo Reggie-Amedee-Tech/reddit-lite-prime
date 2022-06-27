@@ -5,6 +5,7 @@ export const fetchQuereyedPost = createAsyncThunk('post/fetchQuereyedPost', asyn
     const res = await axios.get(`https://www.reddit.com/search.json?q=${subreddit}` )
     .then(res => {
         const json = res.data.data
+        
         console.log(json)
     })
 })

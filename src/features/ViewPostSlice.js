@@ -1,10 +1,9 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-
 import axios from "axios";
 
 // API call for the reddit json data
 export const fetchPosts = createAsyncThunk('post/fetchPosts', async (payload, {dispatch}) => {
-    const res = await axios.get('https://www.reddit.com/r/popular.json?q=' + "&raw_json=1")
+    const res = await axios.get('https://www.reddit.com/r/popular.json?q=&raw_json=1&sort=new&limit=30&include_over_18=on')
     .then(res => {
         return res.data.data
     })
