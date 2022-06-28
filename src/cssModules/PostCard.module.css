@@ -13,6 +13,17 @@
    font-size: small;
 }
 
+.H5 {
+    padding: 10px 0px;
+}
+
+.BottomDiv {
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .TopCard {
     display: flex;
     flex-direction: row;

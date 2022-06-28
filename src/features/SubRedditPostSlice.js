@@ -33,7 +33,7 @@ const queriedPostSlice = createSlice({
             state.error = ''
         })
 
-        builder.addCase(fetchQueriedPost, (state, action) => {
+        builder.addCase(fetchQueriedPost.rejected, (state, action) => {
             state.loading = false
             state.queriedPosts = []
             state.error = action.error.message

@@ -10,20 +10,28 @@ const PostCard = (props) => {
     //if thumbnail === 'self', use a blank white box image
     
     const pictureExist = card.hasOwnProperty('preview')
-  
+    const date = new Date(0)
+    const postDate = card.created_utc
+    date.setUTCSeconds(postDate)
+    const stringObject = date.toString()
+    const actualDate = stringObject.slice(3,10)
+    
 
+    
   return (
     <div className={classes.PageContainer}>
         <div className={classes.Container}>
             <div className={classes.TopCard}>
-            <h5>{card.title}</h5>
+            <h5 className={classes.H5}>{card.title}</h5>
             
             </div>
             <div className={classes.PicDiv}>
             {pictureExist ? <img src={card.preview.images[0].source.url} alt="pic of icon" className={classes.Img}/> : null}
             </div>
-            <div>
-              <p>posted by {card.author}</p>
+            <div className={classes.BottomDiv}>
+              <p>{card.author}</p>
+              <p>posted on {actualDate}</p>
+              <p>{card.num_comments}</p>
             </div>
             
         </div>

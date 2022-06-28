@@ -3,7 +3,7 @@ import axios from "axios";
 
 // API call for the reddit json data
 export const fetchPosts = createAsyncThunk('post/fetchPosts', async (payload, {dispatch}) => {
-    const res = await axios.get('https://www.reddit.com/r/popular.json?q=&raw_json=1&sort=new&limit=25&include_over_18=off')
+    const res = await axios.get('https://www.reddit.com/r/popular.json?q=&raw_json=1&sort=new&limit=25&include_over_18=on')
     .then(res => {
         return res.data.data
     })
@@ -35,7 +35,7 @@ const postSlice = createSlice({
             state.error = ''
         })
 
-        builder.addCase(fetchPosts, (state, action) => {
+        builder.addCase(fetchPosts.rejected, (state, action) => {
             state.loading = false
             state.posts = []
             state.error = action.error.message
