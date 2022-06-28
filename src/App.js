@@ -3,6 +3,7 @@ import './App.css';
 import HomePage from './views/HomePage';
 import ViewQuereyedPost from './views/ViewQueriedPost';
 import SearchForm from './components/SearchForm';
+import SearchedPostsPage from './views/SearchedPostsPage';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path =':id' element={<ViewQuereyedPost/>}/>
+        <Route path="searchedPage" element={<SearchedPostsPage />} />
       </Routes>
       
     </div>

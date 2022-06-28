@@ -1,25 +1,22 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import classes from '../cssModules/PostCard.module.css'
 import PostCard from '../components/PostCard'
-import classes from '../cssModules/ViewQueriedPost.module.css'
 import { Link } from 'react-router-dom'
 
+const SearchedPostsPage = () => {
+    const searchedPosts = useSelector((state) => state.searchedPosts)
 
-
-
-const ViewQuereyedPost = () => {
-    const queriedPost = useSelector(state => state.queriedPosts)
-
-    return (
-        <div>
-            <h2>List of posts </h2>
+  return (
+    <div>
+        <h2>List of posts </h2>
             <div className={classes.MainDiv}>
             <div className={classes.Left}>
-            {queriedPost.loading && <div>Loading...</div>}
-            {!queriedPost.loading && queriedPost.error ? <div>Error: {queriedPost.error}</div> : null}
-            {!queriedPost.loading && queriedPost.queriedPosts.length ? (
+            {searchedPosts.loading && <div>Loading...</div>}
+            {!searchedPosts.loading && searchedPosts.error ? <div>Error: {searchedPosts.error}</div> : null}
+            {!searchedPosts.loading && searchedPosts.searchedPosts.length ? (
                 <ul className={classes.ul}>{
-                    queriedPost.queriedPosts.map((post, i) => {
+                    searchedPosts.searchedPosts.map((post, i) => {
                         // rendering the subreddit posts to the screen
                         return <li className={classes.li} key={i}><PostCard card={post} /></li>
                     })
@@ -30,8 +27,8 @@ const ViewQuereyedPost = () => {
                 <Link to="/">Go Back</Link>
             </div>
             </div>
-        </div>
-    )
+    </div>
+  )
 }
 
-export default ViewQuereyedPost
+export default SearchedPostsPage

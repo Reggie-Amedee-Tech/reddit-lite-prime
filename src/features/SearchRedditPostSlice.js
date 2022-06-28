@@ -4,7 +4,7 @@ import axios from "axios";
 
 
 export const searchPost = createAsyncThunk('post/searchPosts', async (searchTerm) => {
-    const res = await axios.get(`https://www.reddit.com/search.json?q=${searchTerm}`)
+    const res = await axios.get(`https://www.reddit.com/search.json?q=${searchTerm}&raw_json=1&sort=new&limit=25&include_over_18=off`)
     .then(res => res.data.data)
     .then(json => {
         return json.children.map(child => child.data)
