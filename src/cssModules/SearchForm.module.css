@@ -1,0 +1,56 @@
+.SearchDiv {
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.SearchBar {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+    right: 10vw;
+}
+
+.LogoDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.H4 {
+    margin: auto 0;
+    font-size: 2rem;
+}
+
+.Input {
+    margin: 0 auto;
+    padding: 10px;
+    font-size: large;
+}
+
+.Img {
+    width: 90px;
+}
+
+.Link {
+    text-decoration: none;
+    padding: 10px 0px;
+    margin: 10px 0px;
+    width: 7vw;
+    border: solid black 1px;
+    color: black;
+    font-weight: bolder;
+    box-shadow: 10px 5px;
+    margin: 0 auto;
+    position: relative;
+    top: 7px;
+}
+
+.Link:hover {
+    background-color: grey;
+}
+
+.Link:active {
+    background-color: white;
+    box-shadow: 0px 0px;
+}

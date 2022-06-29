@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <SearchForm />
       <Routes>
-        <Route path='/' element={<HomePage/>}/>
+        <Route path='/' element={<HomePage />}/>
         <Route path =':id' element={<ViewQuereyedPost/>}/>
         <Route path="searchedPage" element={<SearchedPostsPage />} />
       </Routes>
