@@ -2,6 +2,7 @@
     padding: 20px 0px;
     display: flex;
     flex-direction: row;
+    background-color: whitesmoke;
 }
 
 .SearchBar {
