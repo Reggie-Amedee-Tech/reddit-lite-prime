@@ -16,7 +16,7 @@ const ViewPost = () => {
 
     return (
         <div>
-        <h2>List of posts </h2>
+        <h2 className={classes.H4}>List of posts </h2>
         {post.loading && <div>Loading...</div>}
         {!post.loading && post.error ? <div>Error: {post.error} </div> : null}
         {!post.loading && post.posts.length ? (

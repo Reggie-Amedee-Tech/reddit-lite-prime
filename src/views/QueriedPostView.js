@@ -9,7 +9,7 @@ const QueriedPost = () => {
     const dispatch = useDispatch()
     
   return (
-    <div>
+    <div className={classes.QueriedPostDiv}>
         <h1 className={classes.H1}>Subreddit</h1>
         <div className={classes.Subreddit}>
             {post.posts.map((post, i) => {

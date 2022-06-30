@@ -29,9 +29,9 @@ const PostCard = (props) => {
             {pictureExist ? <img src={card.preview.images[0].source.url} alt="pic of icon" className={classes.Img}/> : null}
             </div>
             <div className={classes.BottomDiv}>
-              <p>{card.author}</p>
-              <p>posted on {actualDate}</p>
-              <p>{card.num_comments}</p>
+              <p className={classes.Author}>{card.author}</p>
+              <p className={classes.DatePosted}>posted on {actualDate}</p>
+              <p className={classes.NumOfComments}>{card.num_comments}</p>
             </div>
             
         </div>

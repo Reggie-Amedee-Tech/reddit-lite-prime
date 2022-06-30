@@ -12,9 +12,9 @@ const ViewQuereyedPost = () => {
 
     return (
         <div>
-            <h2>List of posts </h2>
             <div className={classes.MainDiv}>
             <div className={classes.Left}>
+            <h2 className={classes.H2}>List of posts </h2>
             {queriedPost.loading && <div>Loading...</div>}
             {!queriedPost.loading && queriedPost.error ? <div>Error: {queriedPost.error}</div> : null}
             {!queriedPost.loading && queriedPost.queriedPosts.length ? (
@@ -27,7 +27,7 @@ const ViewQuereyedPost = () => {
             ) : null}
             </div>
             <div className={classes.Right}>
-                <Link to="/">Go Back</Link>
+                <Link to="/" className={classes.Link}>Go Back</Link>
             </div>
             </div>
         </div>

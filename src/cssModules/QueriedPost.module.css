@@ -1,11 +1,21 @@
+.QueriedPostDiv {
+    height: 100%;
+
+}
+
 .Subreddit {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: whitesmoke;
+    height: 99.50%;
+    
 }
 
 .H1 {
     padding: 15px 0px;
+    background-color: whitesmoke;
+    border-bottom: 3px solid black;
 }
 
 .Link {

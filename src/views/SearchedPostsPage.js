@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import classes from '../cssModules/PostCard.module.css'
+import classes from '../cssModules/ViewQueriedPost.module.css'
 import PostCard from '../components/PostCard'
 import { Link } from 'react-router-dom'
 
@@ -9,9 +9,9 @@ const SearchedPostsPage = () => {
 
   return (
     <div>
-        <h2>List of posts </h2>
             <div className={classes.MainDiv}>
             <div className={classes.Left}>
+            <h2>List of posts </h2>
             {searchedPosts.loading && <div>Loading...</div>}
             {!searchedPosts.loading && searchedPosts.error ? <div>Error: {searchedPosts.error}</div> : null}
             {!searchedPosts.loading && searchedPosts.searchedPosts.length ? (
@@ -24,7 +24,7 @@ const SearchedPostsPage = () => {
             ) : null}
             </div>
             <div className={classes.Right}>
-                <Link to="/">Go Back</Link>
+                <Link to="/" className={classes.Link}>Go Back</Link>
             </div>
             </div>
     </div>
