@@ -26,6 +26,8 @@ ul {
     flex-direction: column;
     min-height: 100vh;
     background-color: #FFFDD0;
+    position: relative;
+    right: 12.60%;
 }
 
 .Right {
