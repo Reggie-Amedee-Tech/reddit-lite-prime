@@ -106,8 +106,24 @@
         padding: 5px;
     }
 
-    .SearchBar {
-        position:relative;
-        left: 0.1px;
+    .SearchDiv {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
+
+    .SearchBar {
+        margin: 0 auto;
+        position: static;
+    }
+
+    .LogoDiv {
+        margin: 0 auto;
+        justify-content: space-around;
+    }
+
+    .H4{
+        font-size: 1.7rem;
+    }
+    
 }
