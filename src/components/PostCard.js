@@ -30,7 +30,7 @@ const PostCard = (props) => {
             </div>
             <div className={classes.BottomDiv}>
               <p className={classes.Author}>{card.author}</p>
-              <p className={classes.DatePosted}>posted on {actualDate}</p>
+              <p className={classes.DatePosted}>{actualDate}</p>
               <a href={card.url} className={classes.NumOfComments} target="_blank">{card.num_comments}</a>
               <div className={classes.TopLeft}>
               <img src={upArrow} alt="arrow pointing up" className={classes.UpArrow}/>
