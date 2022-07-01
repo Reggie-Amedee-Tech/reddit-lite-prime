@@ -5,7 +5,6 @@
 
 .Container {
     border: 3px solid black;
-    width: 100%;
 }
 
 .UpVotes {
@@ -21,6 +20,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     border-top: 3px solid;
     background-color: whitesmoke;
 }
@@ -32,12 +32,9 @@
     justify-content: space-around;
     align-items: center;
     background-color: whitesmoke;
-    
 }
 
 .PageContainer {
-    display: flex;
-    flex-direction: row;
     width: 100%;
 }
 

@@ -67,3 +67,25 @@ ul {
     background-color: white;
     box-shadow: 0px 0px;
 }
+
+@media only screen and (max-width: 701px) {
+    .MainDiv {
+        flex-direction: column;
+    }
+    
+    .Left {
+        flex: 0;
+        position: static;
+        width: 100%;
+        border-right: 5px solid black;
+    }
+
+    .Right {
+        flex: 0;
+        position: static;
+        border-left: 0px;
+        width: 100%;
+        border-right: 5px solid black;
+        min-height: 10vh;
+    }
+}

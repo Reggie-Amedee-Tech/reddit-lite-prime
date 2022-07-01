@@ -22,3 +22,17 @@
     
 }
 
+@media only screen and (max-width: 701px) {
+    .MainDiv {
+        flex-direction: column;
+    }
+    
+    .Left {
+        flex: 0
+    }
+
+    .Right {
+        flex: 0
+    }
+}
+

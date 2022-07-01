@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import classes from '../cssModules/PostCard.module.css'
 import upArrow from '../assets/upArrow.png'
 import downArrow from '../assets/downArrow.png'
-import { Link } from 'react-router-dom'
 
 
 
@@ -33,14 +32,15 @@ const PostCard = (props) => {
               <p className={classes.Author}>{card.author}</p>
               <p className={classes.DatePosted}>posted on {actualDate}</p>
               <a href={card.url} className={classes.NumOfComments} target="_blank">{card.num_comments}</a>
-            </div>
-            
-        </div>
-        <div className={classes.TopLeft}>
+              <div className={classes.TopLeft}>
               <img src={upArrow} alt="arrow pointing up" className={classes.UpArrow}/>
             <p className={classes.UpVotes}>{card.ups}</p>
             <img src={downArrow} alt='arrow pointing down' className={classes.DownArrow}/>
             </div>
+            </div>
+            
+        </div>
+        
     </div>
   )
 }

@@ -37,7 +37,7 @@
     text-decoration: none;
     padding: 10px 0px;
     margin: 10px 0px;
-    width: 7vw;
+    min-width: 7vw;
     border: solid black 1px;
     color: black;
     font-weight: bolder;
@@ -54,4 +54,49 @@
 .Link:active {
     background-color: white;
     box-shadow: 0px 0px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .SearchDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+    .SearchBar {
+        width: 200px;
+        margin: 0px;
+    }
+
+
+    .LogoDiv {
+        width: 400px;
+        
+    }
+
+}
+
+@media only screen and (max-width: 930px) {
+    .Input {
+        padding: 0px;
+    }
+
+    .Link {
+        margin: 0 auto;
+        padding: 10px;
+        
+    }
+    
+    .SearchBar {
+        margin: auto 0;
+    }
+
+    .H4 {
+        font-size: 1rem;
+    }
+
+    .Link {
+        font-size: 0.75rem;
+    }
 }
