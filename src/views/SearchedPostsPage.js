@@ -11,7 +11,7 @@ const SearchedPostsPage = () => {
     <div>
             <div className={classes.MainDiv}>
             <div className={classes.Left}>
-            <h2>List of posts </h2>
+            <h2 className={classes.H2}>List of posts </h2>
             {searchedPosts.loading && <div>Loading...</div>}
             {!searchedPosts.loading && searchedPosts.error ? <div>Error: {searchedPosts.error}</div> : null}
             {!searchedPosts.loading && searchedPosts.searchedPosts.length ? (

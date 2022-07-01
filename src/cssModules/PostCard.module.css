@@ -19,7 +19,7 @@
     padding: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border-top: 3px solid;
     background-color: whitesmoke;
@@ -73,15 +73,15 @@
 }
 
 .Author {
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: bold;
     color: blue;
 }
 
 .DatePosted {
-    font-size: 0.75rem;
+    font-size: 1rem;
 }
 
 .NumOfComments {
-    font-size: 0.75rem;
+    font-size: 1rem;
 }
