@@ -1,7 +1,7 @@
 # Reddit-Lite
 
 ## Reddit-Lite 
-This application is a one stop shop for everything Pokemon! You are able to search for different Pokemon and find basic information about them. You can also save your favorite Pokemon in a list and view them later.
+This application was made for those who wanted to view Reddit-Post. Query different topics and view them in a dashboard while having the ability to comment on them.
 
 ## Features
 * Query Different Reddit Post
