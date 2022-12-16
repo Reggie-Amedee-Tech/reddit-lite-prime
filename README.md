@@ -1,11 +1,20 @@
 # Reddit-Lite
-
-## Reddit-Lite 
 This application was made for those who wanted to view Reddit-Post. Query different topics and view them in a dashboard while having the ability to comment on them.
 
 ## Features
 * Query Different Reddit Post
-* Interact with them in various ways
+* Search Reddit Post By The Current Popular Trends
+* Interact With Them In Varios Ways
+
+### Query Different Reddit Post
+<img src="src/assets/pic2.png" max-width="100%">
+
+### Search Reddit Post By The Current Popular Trends
+<img src="src/assets/pic1.png" max-width="100%">
+
+### Interact With Them In Varios Ways
+<img src="src/assets/pic3.png" max-width="100%">
+<img src="src/assets/pic4.png" max-width="100%">
 
 ## Installation
 * Form and clone this repository
