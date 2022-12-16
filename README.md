@@ -21,6 +21,8 @@ This application was made for those who wanted to view Reddit-Post. Query differ
 * Install NPM packages by running npm install
 * Run npm start to open the application in your browser
 
+[Live Website](https://redditprime.netlify.app/)
+
 ## Technologies Used 
 
 Utilized a MERN stack to build app
