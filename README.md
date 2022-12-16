@@ -4,7 +4,7 @@ This application was made for those who wanted to view Reddit-Post. Query differ
 ## Features
 * Query Different Reddit Post
 * Search Reddit Post By The Current Popular Trends
-* Interact With Them In Varios Ways
+* Interact With Them In Various Ways
 
 ### Query Different Reddit Post
 <img src="src/assets/pic2.png" max-width="100%">
@@ -12,7 +12,7 @@ This application was made for those who wanted to view Reddit-Post. Query differ
 ### Search Reddit Post By The Current Popular Trends
 <img src="src/assets/pic1.png" max-width="100%">
 
-### Interact With Them In Varios Ways
+### Interact With Them In Various Ways
 <img src="src/assets/pic3.png" max-width="100%">
 <img src="src/assets/pic4.png" max-width="100%">
 
